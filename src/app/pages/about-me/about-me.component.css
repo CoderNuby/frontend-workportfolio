@@ -1,0 +1,44 @@
+.about-me-container{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.title{
+    padding: 0rem 0;
+    font-size: 3rem;
+}
+
+.subtitle{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.redirect-to-github{
+    text-decoration: none;
+    background-color: white;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    color: black;
+    border-style: groove;
+    transition: background-color 0.5s;
+}
+
+.redirect-to-github:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.main-text{
+    margin-top: 3rem;
+    padding: 0 9rem;
+}
+
+.main-text h3{
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.main-text p {
+    text-align: justify;
+}

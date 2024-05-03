@@ -1,0 +1,31 @@
+.projects-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.projects-container .project-container{
+    margin: 1rem;
+    flex: 1 0 calc((100% / 3) - 2.2rem);
+    max-width: calc((100% / 3) - 2.2rem);
+    border: 1px solid;
+}
+
+.project-container img{
+    width: 100%;
+}
+
+.project-text{
+    padding: 1rem;
+}
+
+.description{
+    text-align: center;
+}
+
+.name,
+.category,
+.langs,
+.description{
+    padding: 0.25rem 0;
+}

@@ -1,0 +1,17 @@
+<section class="projects-container">
+    <div *ngFor="let project of projects" class="project-container">
+        <img src="{{project.GetImageUrl() | imagepipe: project.image}}" alt="Codework image">
+        <div class="project-text">
+            <h3 class="name">{{project.name}} - {{project.year}}</h3>
+            <hr style="height: 0.25rem; background-color: black;">
+            <p class="category">Category: <strong>{{project.category}}</strong></p>
+            <hr>
+            <p class="langs">Programming Lenguage: <strong>{{project.langs}}</strong></p>
+            <hr>
+            <div class="description">
+                <p>Description: </p>
+                <p>{{project.description}}</p>
+            </div>
+        </div>
+    </div>
+</section>
