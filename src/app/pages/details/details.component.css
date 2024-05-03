@@ -1,0 +1,76 @@
+.project-details-container{
+    display: flex;
+}
+
+.project-details-container img{
+    width: 30rem;
+}
+
+.text-container{
+    margin: 0 2rem;
+    width: 100%;
+}
+
+.text-container h3{
+    text-align: center;
+    font-size: x-large;
+}
+
+.description{
+    text-align: center;
+}
+
+.name,
+.category,
+.langs,
+.description,
+.-component{
+    padding: 0.25rem 0;
+}
+
+.-component{
+    margin: 1rem 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+.details-buttons{
+    margin: 1rem 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.edit{
+    padding: 0.5rem 3rem;
+    background-color: white;
+    color: rgb(16, 161, 18);
+    border-style: groove;
+    border-radius: 20rem;
+    border-color: rgb(16, 161, 18);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit:hover {
+    background-color: rgb(16, 161, 18);
+    color: white;
+    border-color: rgb(16, 161, 18);
+}
+
+.delete{
+    padding: 0.5rem 3rem;
+    background-color: white;
+    color: rgb(176, 0, 0);
+    border-style: groove;
+    border-radius: 20rem;
+    border-color: rgb(176, 0, 0);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete:hover {
+    background-color: rgb(176, 0, 0);
+    color: white;
+    border-color: rgb(176, 0, 0);
+}

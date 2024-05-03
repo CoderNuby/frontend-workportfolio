@@ -1,0 +1,38 @@
+<div class="edit-modal">
+    <div class="edit-container">
+        <button (click)="closeModal()" class="close-modal"><strong>X</strong></button>
+        <section class="edit-project-container">
+            <h3>Editing project</h3>
+            <img class="image" src="{{project.GetImageUrl() | imagepipe: project.image}}" alt="">
+            <form #projectForm="ngForm" (ngSubmit)="editProject(projectForm)">
+                <div class="image-container">
+                    <label for="image">Image</label>
+                    <input id="image" [(ngModel)]="project.image" (change)="fileChange($event)" name="image" type="file" placeholder="Upload Image">
+                </div>
+                <div class="name-container">
+                    <label for="name">Name</label>
+                    <input id="name" [(ngModel)]="project.name" name="name" type="text">
+                </div>
+                <div class="description-container">
+                    <label for="description">Description</label>
+                    <textarea id="description" [(ngModel)]="project.description" name="description" cols="30" rows="10"></textarea>
+                </div>
+                <div class="category-container">
+                    <label for="category">Category</label>
+                    <input id="category" [(ngModel)]="project.category" name="category" type="text">
+                </div>
+                <div class="year-container">
+                    <label for="year">Year</label>
+                    <input id="year" [(ngModel)]="project.year" name="year" type="number">
+                </div>
+                <div class="langs-container">
+                    <label for="langs">Langs</label>
+                    <input id="langs" [(ngModel)]="project.langs" name="langs" type="text">
+                </div>
+                <div class="submit-project-container">
+                    <input id="submit" type="submit" value="Confirm">
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

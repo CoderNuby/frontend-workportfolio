@@ -26,6 +26,31 @@
 .name,
 .category,
 .langs,
-.description{
+.description,
+.details-component{
     padding: 0.25rem 0;
+}
+
+.details-component{
+    margin: 1rem 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+.details {
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    background-color: white;
+    color: black;
+    border-style: groove;
+    border-color: black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.details:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
 }

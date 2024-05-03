@@ -11,7 +11,7 @@ import { UploadImageService } from 'src/app/services/upload-image.service';
 })
 export class CreateProjectComponent {
 
-  project: Project = Project.NewProject()
+  project: Project = Project.NewEmptyProject()
   filesToUpload: File[] = [];
 
   constructor(
@@ -25,10 +25,12 @@ export class CreateProjectComponent {
     if(projectForm.valid){
       this._projectService.create(this.project).subscribe((res) => {
         if(res.ok){
-          this._uploadImageService.fileRequest(res.data._id, [], this.filesToUpload, "image").then((result) => {
-            alert("Project created successfuly");
-            this.project = Project.NewProject();
-          });
+          if(projectForm.value.image){
+            this._uploadImageService.fileRequest(res.data._id, [], this.filesToUpload, "image").then((result) => {
+            });
+          }
+          alert("Project created successfuly");
+          this.project = Project.NewEmptyProject();
         }
       });
     }

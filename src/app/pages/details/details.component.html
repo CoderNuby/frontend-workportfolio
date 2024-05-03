@@ -1,0 +1,25 @@
+
+<section class="project-details-container">
+    <img src="{{project.GetImageUrl() | imagepipe: project.image}}" alt="">
+    <div class="text-container">
+        <h3>{{project.name}} - {{project.year}}</h3>
+        <hr style="height: 0.25rem; background-color: black;">
+        <p class="category">Category: <strong>{{project.category}}</strong></p>
+        <hr>
+        <p class="langs">Programming Lenguage: <strong>{{project.langs}}</strong></p>
+        <hr>
+        <div class="description">
+            <p>Description: </p>
+            <p>{{project.description}}</p>
+        </div>
+        <hr>
+        <div class="details-buttons">
+            <button (click)="Edit()" class="edit">Edit</button>
+            <button (click)="Delete()" class="delete">Delete</button>
+        </div>
+    </div>
+
+
+</section>
+
+<app-editing-modal *ngIf="editing" (closeModalEditing)="closeModal($event)" [project]="project"></app-editing-modal>

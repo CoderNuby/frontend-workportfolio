@@ -15,8 +15,14 @@ export class Project{
         
     }
 
-    public static NewProject(){
+    public static NewEmptyProject(){
         return new Project("", "", "", "", 0, "", "");
+    }
+
+    public static NewProject(project: Project){
+        return new Project(project._id, project.name, project.description,
+            project.category, project.year, project.langs, project.image
+        );
     }
 
     public static NewProjects(projects: Project[]){

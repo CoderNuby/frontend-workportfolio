@@ -11,6 +11,8 @@ import { CreateProjectComponent } from './pages/create-project/create-project.co
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ImagepipePipe } from './pipes/imagepipe.pipe';
+import { DetailsComponent } from './pages/details/details.component';
+import { EditingModalComponent } from './components/editing-modal/editing-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ImagepipePipe } from './pipes/imagepipe.pipe';
     CreateProjectComponent,
     ContactComponent,
     NotFoundComponent,
-    ImagepipePipe
+    ImagepipePipe,
+    DetailsComponent,
+    EditingModalComponent
   ],
   imports: [
     BrowserModule,

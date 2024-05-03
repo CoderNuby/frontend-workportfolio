@@ -19,11 +19,19 @@ export class ProjectService {
     return this._httpClient.get<Resp<Project[]>>(`${this.url}/get`);
   }
 
-  get(): Observable<Resp<Project>> {
-    return this._httpClient.get<Resp<Project>>(`${this.url}`);
+  get(id: string): Observable<Resp<Project>> {
+    return this._httpClient.get<Resp<Project>>(`${this.url}/get/${id}`);
+  }
+
+  update(project: Project): Observable<Resp<Project>> {
+    return this._httpClient.put<Resp<Project>>(`${this.url}/update/${project._id}`, project);
   }
 
   create(project: Project): Observable<Resp<Project>> {
     return this._httpClient.post<Resp<Project>>(`${this.url}/create`, project);
+  }
+
+  delete(id: string){
+    return this._httpClient.delete<Resp<string>>(`${this.url}/delete/${id}`);
   }
 }
